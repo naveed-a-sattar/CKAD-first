@@ -28,7 +28,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 
 lsmod | grep br_netfilter
 output should be:
-br_netfilter should comeup. If no output then it means its not set.
+br_netfilter should show-up. If no output then it means its not set.
 
 
 
