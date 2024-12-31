@@ -82,6 +82,8 @@ sudo sysctl --system
 
 These steps ensure that the nodes are properly configured for Kubernetes networking.
 
+---
+---
 
 ## Docker Installation Instructions
 
