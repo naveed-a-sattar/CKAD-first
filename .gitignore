@@ -1,0 +1,63 @@
+# General OS files
+.DS_Store
+Thumbs.db
+
+# Vagrant
+.vagrant/
+*.box
+
+# Kubernetes Configuration Files
+*.kube/config
+*.kube/cache
+*.kube/http-cache/
+
+# SSH Keys and Configs
+*.pem
+*.key
+*.pub
+
+# Sensitive environment files
+.env
+*.env
+.env.*
+
+# Logs and Debug Files
+*.log
+*.out
+*.err
+
+# Temporary Files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# IDE Files
+.idea/
+.vscode/
+*.iml
+
+# Ansible
+*.retry
+ansible.log
+
+# Terraform (if used for provisioning)
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+
+# Helm
+*.tgz
+
+# Miscellaneous
+*.bak
+*.old
+*.orig
+*.lock
+
+# Ignore custom scripts and local overrides
+local-setup.sh
+*.local
+overrides.yaml
+
