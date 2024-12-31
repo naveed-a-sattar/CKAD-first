@@ -81,3 +81,91 @@ sudo sysctl --system
 ---
 
 These steps ensure that the nodes are properly configured for Kubernetes networking.
+
+
+## Docker Installation Instructions
+
+Follow these steps to install Docker on Ubuntu.
+
+---
+
+### Step 1: Install Required Packages
+
+Run the following command to install required certificates and tools:
+
+```bash
+sudo apt-get install ca-certificates curl -y
+```
+
+---
+
+### Step 2: Set Up Keyrings for Docker Repository
+
+Create the necessary directory for storing keyrings:
+
+```bash
+sudo install -m 0755 -d /etc/apt/keyrings
+```
+
+Download and save Docker's GPG key:
+
+```bash
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+```
+
+Set appropriate permissions for the key:
+
+```bash
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+```
+
+---
+
+### Step 3: Add Docker's Official APT Repository
+
+Add Docker's APT repository to your sources list:
+
+```bash
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+---
+
+### Step 4: Update Package List
+
+Update the APT package list to include Docker's repository:
+
+```bash
+sudo apt update
+```
+
+Then run the following to ensure all package lists are updated:
+
+```bash
+sudo apt-get update
+```
+
+---
+
+### Step 5: Install Docker
+
+Install Docker and required components:
+
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+```
+
+---
+
+### Step 6: Verify Docker Installation
+
+Verify that Docker is installed and running by listing the running Docker containers:
+
+```bash
+sudo docker ps
+```
+
+---
+
+Follow these steps to install Docker successfully and verify that it is working on your Ubuntu system.
