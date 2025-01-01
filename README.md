@@ -85,7 +85,7 @@ These steps ensure that the nodes are properly configured for Kubernetes network
 ---
 ---
 
-## Docker Installation Instructions
+## CRI as Docker Installation Instructions
 
 Follow these steps to install Docker on Ubuntu.
 
@@ -171,3 +171,12 @@ sudo docker ps
 ---
 
 Follow these steps to install Docker successfully and verify that it is working on your Ubuntu system.
+
+---
+---
+## Install kubeadm kubelet and kubectl on each node
+
+Follow the instructions from:
+https://v1-31.docs.kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl
+
+
