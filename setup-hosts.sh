@@ -7,7 +7,7 @@ sed -e "s/^.*${HOSTNAME}.*/${ADDRESS} ${HOSTNAME} ${HOSTNAME}.local/" -i /etc/ho
 sed -e '/^.*ubuntu-bionic.*/d' -i /etc/hosts
 # Update /etc/hosts about other hosts
 cat >> /etc/hosts <<EOF
-192.168.56.1  kubeControlPlane1
-192.168.56.11  kubenode1
-192.168.56.12  kubenode2
+192.168.56.3  kubeControlPlane1
+192.168.56.16  kubenode1
+192.168.56.17  kubenode2
 EOF

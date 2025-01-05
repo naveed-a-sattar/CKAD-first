@@ -7,8 +7,8 @@ NUM_CONTROLPLANE_NODE = 1
 NUM_WORKER_NODE = 2
 
 IP_NW = "192.168.56."
-CONTROLPLANE_IP_START = 1
-NODE_IP_START = 11
+CONTROLPLANE_IP_START = 3
+NODE_IP_START = 15
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
