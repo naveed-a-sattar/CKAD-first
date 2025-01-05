@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ambassador-pod
 spec:
-  container:
+  containers:
   - name: nginx
     image: nginx:stable
     ports:
