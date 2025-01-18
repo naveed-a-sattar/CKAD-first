@@ -4,7 +4,7 @@
 # If this number is changed, remember to update setup-hosts.sh script with the new hosts IP details in /etc/hosts of each VM.
 
 NUM_CONTROLPLANE_NODE = 1
-NUM_WORKER_NODE = 2
+NUM_WORKER_NODE = 1
 
 IP_NW = "192.168.56."
 CONTROLPLANE_IP_START = 3
