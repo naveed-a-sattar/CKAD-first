@@ -1,0 +1,63 @@
+    1  apt-get update
+    2  halt
+    3  k apply -f deployment1.yaml 
+    4  kubectl get no -o wide
+    5  k apply -f deploy2.yaml 
+    6  k get deployments.apps 
+    7  k delete deployments.apps nginx-deployment 
+    8  clear
+    9  k apply -f deployment1.yaml 
+   10  k get deploy,rs,pods
+   11  k rollout status deployment myapp-deployment 
+   12  k rollout status deployment myapp-deployment -o wide
+   13  k rollout history deployment myapp-deployment 
+   14  k rollout --help
+   15  k delete deployments.apps myapp-deployment 
+   16  k apply -f deployment1.yaml --record
+   17  k rollout status deployment myapp-deployment 
+   18  k rollout history deployment myapp-deployment 
+   19  clear
+   20  k get deploy,rs,pods
+   21  k describe deployments.apps myapp-deployment 
+   22  clear
+   23  kubectl edit deploy myapp-deployment 
+   24  kubectl edit deploy myapp-deployment --record
+   25  kubectl rollout status deployment myapp-deployment 
+   26  k describe deployments.apps myapp-deployment 
+   27  k get deploy,rs,pods
+   28  kubectl rollout history deployment myapp-deployment 
+   29  k set image deployments myapp-deployment nginx-container=nginx:1.22-alpine --record
+   30  k set image deployments myapp-deployment nginx-containers=nginx:1.22-alpine --record
+   31  k rollout status deployment myapp-deployment 
+   32  k rollout history deployment myapp-deployment 
+   33  k describe deployments.apps myapp-deployment 
+   34  k get rs,deployments.apps,pod
+   35  k describe pod myapp-deployment-59d5c88d87-7vzsm
+   36  k rollout history deployment myapp-deployment 
+   37  k rollout history deployment myapp-deployment --revision=1
+   38  k rollout history deployment myapp-deployment --revision=2
+   39  k rollout history deployment myapp-deployment --revision=3
+   40  k set image deployments myapp-deployment nginx-containers=nginx:1.21-alpine 
+   41  k rollout history deployment myapp-deployment 
+   42  k rollout history deployment myapp-deployment --revision=4
+   43  k set image deployments myapp-deployment nginx-containers=nginx:1.21-alpine5013513 
+   44  k get rs,deployments.apps,pod
+   45  k rollout history deployment myapp-deployment 
+   46  k rollout history deployment myapp-deployment --record=5
+   47  k rollout history deployment myapp-deployment --revision=5
+   48  k rollout undo --help
+   49  k rollout undo deployment myapp-deployment 
+   50  k get rs,deployments.apps,pod
+   51  k rollout history deployment myapp-deployment 
+   52  k describe deployments.apps myapp-deployment 
+   53  k rollout undo --help
+   54  k rollout undo deployment myapp-deployment --to-revision=1 --record
+   55  k rollout undo deployment myapp-deployment --to-revision=1 
+   56  k rollout history deployment myapp-deployment 
+   57  k describe deployments.apps myapp-deployment 
+   58  k get rs,deployments.apps,pod
+   59  k delete replicasets.apps replicaset.apps/myapp-deployment-59d5c88d87
+   60  k delete replicaset.apps/myapp-deployment-59d5c88d87
+   61  k get rs,deployments.apps,pod
+   62  history
+   63  history > abc.txt
