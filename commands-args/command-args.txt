@@ -1,0 +1,9 @@
+# Start the nginx pod using the default command, but use custom arguments (arg1 .. argN) for that command
+  kubectl run nginx --image=nginx -- <arg1> <arg2> ... <argN>
+  
+# Start the nginx pod using a different command and custom arguments
+ kubectl run nginx --image=nginx --command -- <cmd> <arg1> ... <argN>
+
+
+# Code to run
+kubectl run test --image kodekloud/webapp-color -- --color red
