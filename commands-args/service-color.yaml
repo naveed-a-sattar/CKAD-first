@@ -1,0 +1,15 @@
+#$ k expose pod test --port 8080 --name test-svc --type NodePort --dry-run=client -o yaml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: test
+  name: test-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: test
+  type: NodePort
