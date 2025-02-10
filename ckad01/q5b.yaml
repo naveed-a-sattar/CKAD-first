@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx
+  name: config-pod
+  namespace: ckad-exam
+spec:
+  containers:
+  - env:
+    - name: database_url
+      value: mysql://db.example.com
+    image: nginx
+    name: nginx
+    env:
+    - name: DATABASE_URL
+      valueFrom:
+        configMapKeyRef:
+          name: app-config
+          key: database_url
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
