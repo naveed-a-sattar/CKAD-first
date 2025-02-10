@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: web
+    env: dev
+  name: labelled-pod
+  annotations:
+    description: "This is a test pod"
+  namespace: ckad-exam
+spec:
+  containers:
+  - image: nginx
+    name: labelled-pod

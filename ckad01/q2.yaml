@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: multi-app
+  name: multi-container
+  namespace: ckad-exam
+spec:
+  containers:
+  - command: ["sleep", "3600"]
+    image: busybox
+    name: app-container
+  - name: logger-container
+    image: busybox
+    command: ["sh", "-c", "while true; do echo \"Logging\"; sleep 5; done"]
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
